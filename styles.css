@@ -1,0 +1,72 @@
+.sidebar {
+    width: 326px;
+    background-color: #F8F8F8;
+    padding: 10px;
+    overflow-y: auto;
+    max-height: 198px;
+    top: 0;
+    left: 0;
+}
+
+.sidebar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: rgba(5, 5, 5, 0.18);
+    border-radius: 12px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background-color: #f4f4f4;
+}
+
+.all-categories-button {
+    margin-top: 126px;
+    color: rgba(5, 5, 5, 0.50);
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    cursor: pointer;
+    border-radius: 15px;
+    border: 1px solid rgba(5, 5, 5, 0.20);
+    padding: 14px 29px;
+    transition: background-color 0.3s;
+}
+
+.all-categories-button:hover,
+.all-categories-button:focus {
+    color: #F8F8F8;
+    background-color: #9BB537;
+    border-color: #9BB537;
+}
+
+.wrap {
+    margin-top: 24px;
+}
+
+.category-button {
+    background-color: transparent;
+    display: block;
+    color: rgba(5, 5, 5, 0.30);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 18px;
+    transition: color 0.3s;
+}
+
+.category-button:last-child {
+    margin-bottom: 0;
+}
+
+.category-button:hover,
+.category-button:focus {
+    color: #9BB537;
+}

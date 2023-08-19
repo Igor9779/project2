@@ -1,10 +1,10 @@
-import { fetchAndDisplayCategories, fetchAndDisplayRecipes } from './utils.js';
+import { fetchAndDisplayCategories, fetchRecipes } from './utils.js';
 
 const allCategoriesButton = document.querySelector('.all-categories-button');
 const sidebar = document.querySelector('.sidebar');
 
-allCategoriesButton.addEventListener('click', () => {
-    fetchAndDisplayRecipes('All categories');
+allCategoriesButton.addEventListener('click', async () => {
+    await fetchRecipes();
 });
 
 fetchAndDisplayCategories();

@@ -1,5 +1,6 @@
+const BASE_URL = 'https://tasty-treats-backend.p.goit.global/api';
+
 export async function fetchAndDisplayCategories() {
-    const BASE_URL = 'https://tasty-treats-backend.p.goit.global/api';
     const sidebar = document.querySelector('.sidebar');
 
     try {
@@ -11,31 +12,19 @@ export async function fetchAndDisplayCategories() {
     }
 }
 
-export async function fetchAndDisplayRecipes(category) {
-    const BASE_URL = 'https://tasty-treats-backend.p.goit.global/api';
-    const content = document.querySelector('.content');
+export async function fetchRecipes(category) {
 
     try {
-        let apiUrl;
-        if (category === 'All categories') {
-            apiUrl = `${BASE_URL}/recipes`; // Отримати всі рецепти
-        } else {
-            apiUrl = `${BASE_URL}/recipes?category=${category}`; // Отримати рецепти за категорією
+        let apiUrl = `${BASE_URL}/recipes`; 
+        if (category !== 'All categories') {
+            apiUrl = `${BASE_URL}/recipes?category=${category}`;
         }
 
-        const response = await fetch(apiUrl);
-        const recipes = await response.json();
-        content.innerHTML = '';
-
-        recipes.forEach(recipe => {
-            const recipeElement = document.createElement('div');
-            recipeElement.textContent = recipe.name;
-            content.appendChild(recipeElement);
-        });
     } catch (error) {
-        console.error('Error fetching recipes:', error);
+        console.error('Error fetching and displaying recipes:', error);
     }
 }
+
 
 function addCategoryButtons(categories, sidebar) {
     categories.forEach(category => {
